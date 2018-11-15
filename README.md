@@ -1,4 +1,4 @@
-There are two ways to run the test from the command line interface:
+There are at least three ways to run the test from the command line interface:
 
 1. Download selenium/out/artifacts/kraftvaerktest_jar/kraftvaerktest.jar, then run it with
 
@@ -15,3 +15,7 @@ mvn -f pathTo_3\kraftvaerktest clean install assembly:single
 then run the test:
 
 java -classpath "pathTo_3\kraftvaerktest\target\kraftvaerk-test-1.0-SNAPSHOT-jar-with-dependencies.jar;pathTo_3\kraftvaerktest\target\kraftvaerk-test-1.0-SNAPSHOT-tests.jar" org.junit.runner.JUnitCore rutest.Kraftvaerk
+
+3. Run the test with Maven:
+
+mvn -f pathTo_3\kraftvaerktest -Dtest=Kraftvaerk#testSearch test
